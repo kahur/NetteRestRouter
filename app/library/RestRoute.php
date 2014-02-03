@@ -20,10 +20,10 @@ use Nette,
 
 class RestRoute extends Route {
     
-    const METHOD_POST = 1;
-    const METHOD_GET = 2;
-    const METHOD_PUT = 3;
-    const METHOD_DELETE = 4;
+    const METHOD_GET = 100;
+    const METHOD_POST = 200;    
+    const METHOD_PUT = 300;
+    const METHOD_DELETE = 400;
     
     const METHOD_POST_STR = 'POST';
     const METHOD_GET_STR = 'GET';
