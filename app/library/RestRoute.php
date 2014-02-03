@@ -40,7 +40,9 @@ class RestRoute extends Route {
     private $deleteMethod = 'delete';
     private $defaultMethod = 'default';
     
-    
+    /**
+     * @todo refactoring, split to 2 methods
+     */
     public function match(Nette\Http\IRequest $httpRequest) {
 	
 		
@@ -54,12 +56,9 @@ class RestRoute extends Route {
 	    $this->setRequestMethod($requestMethodId);
 	}
 	
-	//prepare all
-	
 	//get presenter request
 	$presenterRequest = parent::match($httpRequest);
-//	var_dump($presenterRequest);
-//	exit;
+	
 	if($presenterRequest){
 	    //get presenter setting parrams
 	    $presenterParams = $presenterRequest->getParameters();
@@ -71,9 +70,8 @@ class RestRoute extends Route {
 
 	    return $presenterRequest;
 	}
-	else {
-	    //todo
-	}
+	
+        return $presenterRequest;	
 	
     }
     
