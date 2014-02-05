@@ -11,7 +11,7 @@ Flags
 
 Dependencies
 ------------
-* Nette 2.10 +
+* Nette 2.1.0 +
 
 Installation
 ------------
